@@ -55,7 +55,7 @@ foreach($chan_array as $foo) {
 	$i = $i +1;
 	$foo = trim($foo);
 	preg_match("/^(\d*?) .*$/",$foo,$bar1);
-	preg_match("/^.*? .* (.*)$/",$foo,$bar2);
+	preg_match("/^\d*? [\w\s]+ (\d*)$/",$foo,$bar2);
 	$vmarray[$i]['ext'] = $bar1[1];
 	$vmarray[$i]['vm']  = $bar2[1];
 }
